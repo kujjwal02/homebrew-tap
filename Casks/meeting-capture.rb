@@ -12,6 +12,8 @@ cask "meeting-capture" do
     strategy :github_latest
   end
 
+  # The app updates itself, so `brew upgrade` leaves it alone unless run with --greedy.
+  auto_updates true
   depends_on arch: :arm64
   depends_on :macos
 

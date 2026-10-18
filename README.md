@@ -16,13 +16,15 @@ installs the app, so macOS opens it without the "Apple could not verify" prompt.
 
 ## Upgrade and remove
 
+The app updates itself from GitHub releases, so `brew upgrade` skips it. To upgrade through Homebrew
+anyway, run `brew upgrade --cask --greedy meeting-capture`.
+
 ```sh
-brew upgrade --cask meeting-capture
 brew uninstall --cask meeting-capture
 brew uninstall --zap --cask meeting-capture   # also deletes settings, sign-ins, the job store and logs
 ```
 
 ## Release a new version
 
-Set `version` and `sha256` in `Casks/meeting-capture.rb`. The SHA-256 comes from the `.sha256` file
-that `just release` writes next to the DMG.
+The release workflow in meeting-capture sets `version` and `sha256` in `Casks/meeting-capture.rb`
+after it publishes a release. It pushes with a deploy key that has write access to this repo.
