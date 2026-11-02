@@ -1,6 +1,6 @@
 cask "meeting-capture" do
-  version "0.9.1"
-  sha256 "b64630d192a861d7f86279aa9d634ba59662fa7e3e4c28e37419d9f0a5cbac70"
+  version "0.10.0"
+  sha256 "dcb92a48c2cffbe48946af8f01f531599c52d15f7b1dd3a7e04d2bb2cd29931e"
 
   url "https://github.com/kujjwal02/meeting-capture/releases/download/v#{version}/Meeting-Capture_#{version}_aarch64.dmg"
   name "Meeting Capture"
